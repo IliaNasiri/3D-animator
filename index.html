@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Personal Website</title>
+</head>
+<body>
+    <div class="loader__container d-flex flex-column justify-content-center align-items-center d-none">
+        <div class="loader__ball__container position-relative">
+            <div class="loader__ball position-absolute"></div>
+        </div>
+        <div class="loader__linear__container mt-3 mt-md-4">
+            <div class="loader__linear position-relative">
+                <hr class="loader__linear--hr w-100 position-absolute">
+                <div class="loader__linear--line--left-1 position-absolute"></div>
+                <div class="loader__linear--line--left-2 position-absolute"></div>
+                <div class="loader__linear--line--left-3 position-absolute"></div>
+                <div class="loader__linear--line--left-4 position-absolute"></div>
+                <div class="loader__linear--line--left-5 position-absolute"></div>
+                <div class="loader__linear--line--left-6 position-absolute"></div>
+                <div class="loader__linear--line--left-7 position-absolute"></div>
+                <div class="loader__linear--line--left-8 position-absolute"></div>
+                <div class="loader__linear--line--left-9 position-absolute"></div>
+                <div class="loader__linear--line--center position-absolute"></div>
+                <div class="loader__linear--line--right-1 position-absolute"></div>
+                <div class="loader__linear--line--right-2 position-absolute"></div>
+                <div class="loader__linear--line--right-3 position-absolute"></div>
+                <div class="loader__linear--line--right-4 position-absolute"></div>
+                <div class="loader__linear--line--right-5 position-absolute"></div>
+                <div class="loader__linear--line--right-6 position-absolute"></div>
+                <div class="loader__linear--line--right-7 position-absolute"></div>
+                <div class="loader__linear--line--right-8 position-absolute"></div>
+                <div class="loader__linear--line--right-9 position-absolute"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page__scroll__bar--container" dir="rtl">
+        <div class="page__scroll__bar--handle"></div>
+    </div>
+    <div class="container-fluid page__container">
+        <header class="row row-cols-1 justify-content-center align-items-center page__header">
+            <div class="col d-flex flex-column align-items-center justify-content-center">
+                <h1 class="header__heading d-inline-block text-center">
+                    <div class="header__heading--persian" dir="rtl">ایلیا نصیری</div>
+                    <div class="header__heading--english">Ilia Nasiri</div>
+                </h1>
+                <div class="header__hastags d-flex flex-column">
+                    <div class="header__hastags--persian" dir="rtl"><span>#انیماتور</span><span>#انیمیشن سه بعدی</span></div>
+                    <div class="header__hastags--english"><span>#Animator</span><span>#3DAnimation</span></div>
+                </div>
+            </div>
+        </header>
+        <main class="container-fluid p-0">
+            <section class="row row-cols-1 row-cols-md-2 main__about__SIN">
+                <div class="col col-md-5 d-flex align-items-center about__wallpaper">
+                    <img class="img-fluid" src="./images/dog image in about section.png" alt="this is a picture of animated dog">
+                </div>
+                <div class="col col-md-7 about__prag d-flex flex-column">
+                    <div class="about__prag--presian" dir="rtl">
+                        <h4 class="prag__presian--header">سلام، من ایلیا نصیری ام و <span id="SIN__Current__Age--persian"></span> سالمه.</h4>
+                        <p class="prag__presian--pragraph">اگر بخواهیم تعریف کاملی از انیمیشن داشته باشیم باید بگوییم شیوه ای است که در آن عکس ها به صورت تصاویر متحرک ظاهر می شوند ، به اصطلاح به این کار فریم به فریم اجرا کردن می گویند که به هر عکس یک فریم گفته می شود. یک انیمیشن از بخش های فنی مختلفی تشکیل شده است. مدلسازی، ریگینگ، نورپردازی، طراحی کرکتر و فضا و انیمیت. انیمیت هنر جان بخشی به کارکتر های بی جان انیمیشن یا فیلم هست. به اعتقاد من انیمیت قلب انیمیشن هست. چیزی که بعد از ایده به چشم می خورد نحوه حرکت اجسام و کرکتر هاست.</p>
+                    </div>
+                    <div class="about__prag--english">
+                        <h4 class="prag__english--header">Hi, i’m Ilia Nasiri and i’m <span id="SIN__Current__Age--english"></span> years old.</h4>
+                        <p class="prag__english--pragraph">If we want to have a complete definition of animation, we must say that it is a way in which photos appear as moving images, so-called frame-by-frame execution, where each photo is called a frame. An animation consists of various technical parts. Modeling, rigging, lighting, character and space design and animating. Animate is the art of giving life to inanimated characters. I believe that animate is the heart of animation. what comes after the subject of a movie is the way objects and characters move.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="row row-cols-1 main__animator__skills">
+                <div class="skills__header d-flex flex-column p-0">
+                    <h3 class="skills__header--persian text-center text-black" dir="rtl">یک انیماتور در چه کار هایی خوب است؟</h3>
+                    <h3 class="skills__header--english text-center text-black">What,s an animator good at?</h3>
+                </div>
+                <div class="skills__boxes--container d-flex flex-row-reverse flex-wrap justify-content-between">
+                    <div class="skills__box d-flex flex-column justify-content-center">
+                        <div class="skills__boxes--persian text-white">هنر</div>
+                        <div class="skills__boxes--english text-white">Art</div>
+                    </div>
+                    <div class="skills__box d-flex flex-column justify-content-center">
+                        <div class="skills__boxes--persian text-white">دانش انیمیشن</div>
+                        <div class="skills__boxes--english text-white">Knowledge of animation</div>
+                    </div>
+                    <div class="skills__box d-flex flex-column justify-content-center">
+                        <div class="skills__boxes--persian text-white">ارتباط</div>
+                        <div class="skills__boxes--english text-white">Communication</div>
+                    </div>
+                    <div class="skills__box d-flex flex-column justify-content-center">
+                        <div class="skills__boxes--persian text-white">سازمانبندی</div>
+                        <div class="skills__boxes--english text-white">Organization</div>
+                    </div>
+                </div>
+            </section>
+            <section class="row row-cols-1 main__work__experience">
+                <div class="work__experience--wallpaper"> 
+                    <img src="./images/a man who walking image.png" alt="a man who walking">
+                </div>
+                <div class="work__experience__lists d-flex flex-wrap flex-row-reverse justify-content-around">
+                    <div class="work__experience__lists--persian" dir="rtl">
+                        <h3 class="work__experience__lists--header text-white">تجربه کاری</h3>
+                        <ul class="work__experience__lists--header--persian h-75 d-flex flex-column justify-content-around">
+                            <li class="text-white">کار با شرکت انیمیشن سازی درخت سفید و مرکز نوآوری ویکست</li>
+                            <li class="text-white">انیماتور انیمیشن سریالی "دشت پرماجرا"</li>
+                            <li class="text-white">انیماتور انیمیشن سینمایی Manu</li>
+                            <li class="text-white">تجربه همکاری با کانال خاص Deaf Animtion World</li>
+                        </ul>
+                    </div>
+                    <div class="work__experience__lists--english">
+                        <h3 class="work__experience__lists--header text-white">Work Experience</h3>
+                        <ul class="work__experience__lists--header--english h-75 d-flex flex-column justify-content-between">
+                            <li class="text-white">Working with White Tree Animation Company and Vcast</li>
+                            <li class="text-white">animator of Dasht Pormajara animation series</li>
+                            <li class="text-white">animator of Manu animation movie</li>
+                            <li class="text-white">Experience of cooperation with special channel Deaf Animation World</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="row row-cols-1 main__samples">
+                <div class="main__samples__header">
+                    <h2 class="text-center" dir="rtl">نمونه کار های من!</h2>
+                    <h2 class="text-center">My work samples!</h2>
+                </div>
+                <div class="main__samples__movies d-flex flex-column align-items-center">
+                    <video src="" controls></video>
+                    <video src="" controls></video>
+                    <video src="" controls></video>
+                    <video src="" controls></video>
+                    <video src="" controls></video>
+                    <video src="" controls></video>
+                </div>
+            </section>
+        </main>
+        <footer class="row row-cols-1 justify-content-around align-items-center page__footer">
+            <address dir="rtl" class="Contact__us">
+                <h4 class="text-white">تماس با ما :</h4>
+                <p class="text-white">ایمیل : <span class="call__us__data" data-tooltip="برای کپی کلیک کنید" data-clipboard-text="ilianasiri84@gmail.com">ilianasiri84@gmail.com</span></p>
+                <p class="text-white">اینستاگرام : <span class="call__us__data" data-tooltip="برای کپی کلیک کنید" data-clipboard-text="ilia848">ilia848</span></p>
+                <p class="text-white">شماره تلفن : <span class="call__us__data" data-tooltip="برای کپی کلیک کنید" data-clipboard-text="989031252106">9031252106 98+</span></p>
+            </address>
+            <address dir="rtl" class="address">
+                <h4 class="text-white">آدرس</h4>
+                <p class="text-white">ایران , تهران</p>
+            </address>
+        </footer>
+    </div>
+</body>
+</html>

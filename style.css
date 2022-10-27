@@ -1,0 +1,435 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800&display=swap');
+@font-face {
+    font-family: "Myriad Arabic Regular";
+    src: url(./fonts/Myriad\ Arabic\ Regular/);
+}
+@font-face {
+    font-family: "Myriad Pro Regular";
+    src: url(./fonts/Myriad\ Pro\ Regular/);
+}
+/* removing the navigation bar */
+body::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* style the custom scroll bar */
+.page__scroll__bar--container{
+    position: fixed;
+    width: 100%;
+    height: 4px;
+    z-index: 1;
+    top: 0;
+    background: rgb(153, 153, 153);
+}
+.page__scroll__bar--handle{
+    height: 4px;
+    background: #ffffff;
+}
+/* ball style and animation */
+.loader__container{
+    height: 100vh;
+    background: #fff;   
+}
+.loader__container > div{
+    width: 75%;
+}
+.loader__ball{
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    bottom: 100%;
+    left: 0;
+    animation: BallTranslateXSVersion 2s infinite ease-in-out;
+}
+@keyframes BallTranslateXSVersion {
+    0% , 100%{
+        left: 0;
+    }
+    50%{
+        left: calc(100% - 40px);
+    }
+}
+@keyframes BallTranslateMDVersion {
+    0% , 100%{
+        left: 0;
+    }
+    50%{
+        left: calc(100% - 60px);
+    }
+}
+@keyframes BallTranslateXLVersion {
+    0% , 100%{
+        left: 0;
+    }
+    50%{
+        left: calc(100% - 80px);
+    }
+}
+/* linear style and animation */
+.loader__linear{
+    height: 30px;
+}
+.loader__linear--hr{
+    height: 2px;
+    color: #000;
+    background-color: #000;
+    opacity: 1;
+}
+div[class *= "loader__linear--line"] , .loader__linear--filler{
+    width: 1px;
+    height: 15px;
+    background: #000;
+    top: 31%;
+}
+.loader__linear--line--left-1{left: 0;}
+.loader__linear--line--left-2{left: .8%;}
+.loader__linear--line--left-3{left: 1.8%;}
+.loader__linear--line--left-4{left: 3.5%;}
+.loader__linear--line--left-5{left: 7%;}
+.loader__linear--line--left-6{left: 13%;}
+.loader__linear--line--left-7{left: 21%;   }
+.loader__linear--line--left-8{left: 30.2%;}
+.loader__linear--line--left-9{left: 40%;}
+.loader__linear--line--center{left: 50%;}
+.loader__linear--line--right-1{right: 0;}
+.loader__linear--line--right-2{right: .8%;}
+.loader__linear--line--right-3{right: 1.8%;}
+.loader__linear--line--right-4{right: 3.5%;}
+.loader__linear--line--right-5{right: 7%;}
+.loader__linear--line--right-6{right: 13%;}
+.loader__linear--line--right-7{right: 21%;}
+.loader__linear--line--right-8{right: 30.2%;}
+.loader__linear--line--right-9{right: 40%;}
+/* media queries for loader styles */
+@media (min-width: 650px) {
+    .loader__ball{
+        width: 60px;
+        height: 60px;
+        border: 4px solid black;
+        animation-name: BallTranslateMDVersion;
+    }
+    .loader__linear--hr{
+        height: 2.5px;
+        top: 15px;
+    }
+    div[class *= "loader__linear--line"] , .loader__linear--filler{
+        width: 2px;
+        height: 25px;
+        top: 68%;
+    }
+}
+@media (min-width: 1000px) {
+    .loader__ball{
+        width: 80px;
+        height: 80px;
+        border: 5px solid black;
+        animation-name: BallTranslateXLVersion;
+    }
+    .loader__container > div{
+        width: 50%;
+    }
+    .loader__linear--hr{
+        height: 3px;
+        top: 25px;
+    }
+    div[class *= "loader__linear--line"] , .loader__linear--filler{
+        height: 30px;
+        top: 90%;
+    }
+}
+/* styling web page */
+.page__header{
+    height: 100vh;
+    background: radial-gradient(#012453 30%, #01122a);
+}
+.header__heading{
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 6rem;
+    font-family: "Vazirmatn";
+    border-top: .2rem solid #8092a9;
+    border-bottom: .2rem solid #8092a9;
+    width: 40%;
+}
+.header__heading--english{
+    font-weight: 800;   
+}
+.header__hastags{
+    font-size: 1.8rem;
+}
+.header__hastags--persian , .header__hastags--english {
+    display: flex;
+    gap: 3rem;
+    color: #ffffff;
+}
+/* about SIN */
+.main__about__SIN{
+    padding: 2rem;
+}
+.about__prag{
+    margin-top: 2rem;
+    gap: 1.4rem;
+}
+.prag__presian--header , .prag__english--header{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.about__prag--presian{
+    font-family: "Vazirmatn";
+    font-weight: 500;
+}
+.about__prag--english{
+    font-family: "Barlow Condensed";
+    font-weight: 500;
+}
+.prag__presian--pragraph , .prag__english--pragraph{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+@media (max-width: 400px) {
+    .header__heading{
+        width: 70%;
+        font-size: 5.5rem;
+        line-height: 8rem;
+    }
+}
+@media (min-width: 760px) {
+    .prag__presian--header , .prag__english--header{
+        font-size: 1.4rem;
+    }
+    .prag__presian--pragraph , .prag__english--pragraph{
+        font-size: .9rem;
+    }
+}
+/* SIN's skill */
+.main__animator__skills{
+    background-image: url(./images/third\ man\ image.png),url(./images/second\ man\ image.png),url(./images/first\ man\ image.png);
+    background-size: 60% 30%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%, 50% 50%, 50% 100%;
+    background-color: #f6f6f6;
+}
+.skills__header{
+    margin: 2rem 0;
+}
+.skills__header > h3{
+    font-family: "Vazirmatn";
+    line-height: 3rem;
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+.skills__box{
+    background: rgba(7, 55, 117, 0.6);
+    margin: 2rem 0;
+    padding: 4rem 0;
+    width: 100%;
+}
+.skills__box > div{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "Vazirmatn";
+    font-weight: 400;
+}
+.skills__boxes--persian{
+    margin-bottom: 1.3rem;
+}
+@media (min-width: 500px) {
+    .skills__box{
+        width: 47%;
+    }
+    .main__animator__skills{
+        background-size: 33%;
+        background-position: 0 center , 50% center , 100% center;
+    }
+}
+@media (min-width: 1000px) {
+    .skills__header{
+        margin: 28px 0;
+    }
+    .skills__header > h3{
+        line-height: 42px;
+        font-size: 26.6px;
+    }
+    .skills__box{
+        width: 20%;
+        margin: 28px 0;
+        padding: 56px 0;
+    }
+    .main__animator__skills{
+        background-size: 20%;
+        background-position: 10% center , 50% center , 90% center;
+    }
+    .skills__box > div{
+        font-size: 35px;
+    }
+    .skills__boxes--persian{
+        margin-bottom: 7px;
+    }
+}
+/* work experience */
+.main__work__experience{
+    background-color: #f6f6f6;
+}
+.work__experience--wallpaper{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+.work__experience--wallpaper > img{
+    width: 90%;
+    object-fit: contain;
+}
+.work__experience__lists{
+    margin-top: 3rem;
+}
+.work__experience__lists > div{
+    width: 40%;
+    background-color: #002453;
+    padding: 2rem;
+    font-family: "Vazirmatn";
+}
+.work__experience__lists > div > h3{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.work__experience__lists--header--english{
+    font-size: 1.1rem;
+}
+.work__experience__lists--header--persian{
+    font-size: 1.2rem;
+}
+.work__experience__lists--persian{
+    border-radius: 3rem 0;
+}
+.work__experience__lists--english{
+    border-radius: 0 3rem;
+}
+/* SINs' Sample */
+.main__samples{
+    padding: 2rem 0;
+}
+.main__samples__header{
+    margin-bottom: 2rem;
+}
+.main__samples__header > h2{
+    font-size: 3rem;
+    font-family: "Vazirmatn";
+    font-weight: 800;
+}
+.main__samples__movies{
+    gap: 3rem;
+}
+.main__samples__movies > video{
+    width: 60%;
+    height: 500px;
+    background: black;
+}
+@media (max-width: 1100px) {
+    .main__samples__movies > video{
+        width: 70%;
+        height: 300px;
+    }
+}
+@media (max-width: 668px) {
+    .main__samples__movies > video{
+        width: 85%;
+        height: 300px;
+    }
+}
+@media (max-width: 570px) {
+    .main__samples__movies > video{
+        height: 250px;
+    }
+}
+/* page footer */
+.page__footer{
+    background-color: #002453;
+    font-family: "Vazirmatn";
+    padding: 2rem;
+}
+.page__footer > address{
+    background-color: #2f3462;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.page__footer > address > h4{
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+}
+.page__footer > address > p{
+    font-size: 1rem;
+}
+.call__us__data{
+    padding: .3rem 1rem .2rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.call__us__data::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 103%;
+    top: .5rem;
+    font-size: .7rem;
+    width: 110%;
+    display: none;
+}
+.call__us__data:hover{
+    background-color: #002453;
+}
+.call__us__data:hover::before{
+    display: block;
+}
+.address{
+    margin-bottom: 0 !important;
+}
+.Contact__us{
+    margin-bottom: 2rem !important;
+}
+@media (min-width: 900px) {
+    .page__footer{
+        align-items: stretch !important;
+    }
+    .page__footer > address{
+        width: 45%;
+    }
+    .Contact__us{
+        margin-bottom: 0 !important;
+    }
+}
+/* responsive website */
+@media (max-width: 667px){
+    :root{
+		font-size: 8px;
+    }
+    .work__experience__lists > div{
+        width: 90%;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+@media (min-width: 668px) {
+    :root{
+		font-size: 14px;
+    }
+}
+@media (min-width: 1100px) {
+    :root{
+		font-size: 20px;
+    }
+	.center__point{
+		width: 3rem;
+		height: 3rem;
+		right: calc(50% - 1.5rem);
+		top: calc(50% - 1.5rem);
+	}
+}
